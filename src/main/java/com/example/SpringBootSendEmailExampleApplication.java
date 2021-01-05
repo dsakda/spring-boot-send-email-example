@@ -18,7 +18,8 @@ public class SpringBootSendEmailExampleApplication implements CommandLineRunner 
 
 	@Override
 	public void run(String... args) throws Exception {
-		emailService.sendEmail();
 		System.out.println("Sending email......");
+		emailService.sendEmail();
+		System.out.println("Send email success");
 	}
 }
