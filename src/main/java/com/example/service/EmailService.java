@@ -24,7 +24,7 @@ public class EmailService {
 
     public void sendEmail() throws MessagingException {
 
-        String sentMailTo = "dejsakda@gmail.com";
+        String sendMailTo = "dejsakda@gmail.com";
 
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
@@ -45,7 +45,7 @@ public class EmailService {
         helper.setText(content, true);
         helper.setSubject("Email from spring boot");
         helper.setFrom("springbootmailsender@gmail.com");
-        helper.setTo(sentMailTo);
+        helper.setTo(sendMailTo);
 
         helper.addInline("image001", new ClassPathResource("static/images/email/gallery2.png"), "image/png");
 
